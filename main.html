@@ -1,60 +1,194 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Personal Profile</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Personal Profile</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f5f5f5;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 30px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+      border-radius: 10px;
+    }
+
+    h2 {
+      border-bottom: 2px solid #f39c12;
+      padding-bottom: 5px;
+      margin-top: 20px;
+      color: #333;
+    }
+
+    /* Profile Section */
+    .profile {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    .profile img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      margin-right: 20px;
+      border: 3px solid #f39c12;
+    }
+
+    .profile-info p {
+      margin: 5px 0;
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* About Me Section */
+    .about-me p {
+      font-size: 16px;
+      line-height: 1.6;
+      color: #555;
+    }
+
+    /* Skills Section */
+    .skill {
+      margin: 15px 0;
+    }
+
+    .skill .skill-name {
+      display: flex;
+      justify-content: space-between;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+
+    .skill-bar {
+      width: 100%;
+      height: 20px;
+      background: #ddd;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .skill-bar span {
+      display: block;
+      height: 100%;
+      background: #f39c12;
+      border-radius: 10px;
+      width: 0%;
+      text-align: right;
+      padding-right: 5px;
+      color: white;
+      font-weight: bold;
+      line-height: 20px;
+      transition: width 1s ease-in-out;
+    }
+
+    /* Icons for skills */
+    .skills-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 10px;
+    }
+
+    .skills-icons div {
+      text-align: center;
+      font-size: 24px;
+      color: #f39c12;
+    }
+
+    .skills-icons div span {
+      display: block;
+      font-size: 14px;
+      color: #333;
+      margin-top: 5px;
+    }
+
+  </style>
 </head>
 <body>
-  <header class="header">
-    <div class="profile-pic">
-      <img src="https://via.placeholder.com/150" alt="Profile Picture">
+  <div class="container">
+
+    <!-- Name -->
+    <h2>Name</h2>
+    <div class="profile-info">
+      <p>Aditya Gaikwad</p>
     </div>
-    <h1>Aditya Gaikwad</h1>
-    <p class="role">Frontend Developer | JavaScript Enthusiast</p>
-  </header>
 
-  <section class="about">
-    <h2>About Me</h2>
-    <p>Hello! I'm a passionate web developer with experience in building interactive and responsive web applications. I love coding, learning new technologies, and creating projects that solve real-world problems.</p>
-  </section>
+    <!-- Email -->
+    <h2>Email</h2>
+    <div class="profile-info">
+      <p>aditya.gaikwad@example.com</p>
+    </div>
 
-  <section class="skills">
+    <!-- Profile -->
+    <h2>Profile</h2>
+    <div class="profile-info">
+      <p>Front-End Developer / Full Stack Developer</p>
+    </div>
+
+    <!-- About Me -->
+    <h2>About me</h2>
+    <div class="about-me">
+      <p>I am a passionate web developer with experience in creating responsive, user-friendly websites. I enjoy solving problems with creative coding solutions and continuously learning new technologies.</p>
+    </div>
+
+    <!-- Skills -->
     <h2>Skills</h2>
-    <ul>
-      <li>HTML5, CSS3, JavaScript</li>
-      <li>React.js, Node.js</li>
-      <li>Responsive Web Design</li>
-      <li>Version Control (Git)</li>
-    </ul>
-  </section>
-
-  <section class="experience">
-    <h2>Experience</h2>
-    <div class="job">
-      <h3>Frontend Developer - XYZ Company</h3>
-      <p>June 2024 - Present</p>
-      <p>Worked on building responsive web pages, implemented interactive UI components, and optimized website performance.</p>
+    <div class="skills-icons">
+      <div><i class="fab fa-html5"></i><span>HTML</span></div>
+      <div><i class="fab fa-css3-alt"></i><span>CSS</span></div>
+      <div><i class="fab fa-js-square"></i><span>JavaScript</span></div>
+      <div><i class="fab fa-react"></i><span>React</span></div>
+      <div><i class="fab fa-node"></i><span>Node.js</span></div>
     </div>
-    <div class="job">
-      <h3>Intern - ABC Tech</h3>
-      <p>Jan 2024 - May 2024</p>
-      <p>Assisted in developing small web applications and learned best practices in web development.</p>
+
+    <div class="skill">
+      <div class="skill-name">HTML <span>95%</span></div>
+      <div class="skill-bar"><span style="width: 95%"></span></div>
     </div>
-  </section>
 
-  <section class="contact">
-    <h2>Contact Me</h2>
-    <p>Email: aditya@example.com</p>
-    <p>Phone: +91 9876543210</p>
-    <p>LinkedIn: <a href="#">linkedin.com/in/adityagaikwad</a></p>
-    <p>GitHub: <a href="#">github.com/adityagaikwad</a></p>
-  </section>
+    <div class="skill">
+      <div class="skill-name">CSS <span>90%</span></div>
+      <div class="skill-bar"><span style="width: 90%"></span></div>
+    </div>
 
-  <footer>
-    <p>&copy; 2025 Aditya Gaikwad. All Rights Reserved.</p>
-  </footer>
+    <div class="skill">
+      <div class="skill-name">JavaScript <span>85%</span></div>
+      <div class="skill-bar"><span style="width: 85%"></span></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">React <span>80%</span></div>
+      <div class="skill-bar"><span style="width: 80%"></span></div>
+    </div>
+
+    <div class="skill">
+      <div class="skill-name">Node.js <span>75%</span></div>
+      <div class="skill-bar"><span style="width: 75%"></span></div>
+    </div>
+
+  </div>
+
+  <script>
+    // Animate skill bars on page load
+    window.addEventListener("load", () => {
+      document.querySelectorAll('.skill-bar span').forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = "0";
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 100);
+      });
+    });
+  </script>
 </body>
 </html>
